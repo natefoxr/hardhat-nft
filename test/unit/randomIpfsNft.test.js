@@ -12,7 +12,7 @@ const { developmentChains, networkConfig, } = require("../../helper-hardhat-conf
             accounts = await ethers.getSigners();
             deployer = accounts[0];
             user = accounts[1];
-            await deployments.fixture("main");
+            await deployments.fixture(["mocks", "randomIpfsNft"]);
             randomIpfsNftContract = await ethers.getContract("RandomIpfsNft");
             randomIpfsNft = randomIpfsNftContract.connect(user);
             vrfCoordinatorV2Mock = await ethers.getContract("VRFCoordinatorV2Mock")
