@@ -28,7 +28,7 @@ module.exports = async function({getNamedAccounts}) {
             await vrfCoordinatorV2Mock.fulfillRandomWords(requestId, randomIpfsNft.address);
         }
     })
-    console.log(`Random IPFS NFT index 1 has tokenURI: ${await randomIpfsNft.tokenURI(0)}`)
+    console.log(`Random IPFS NFT index 0 has tokenURI: ${await randomIpfsNft.tokenURI(0)}`)
 
 
     // Random Ipfs
